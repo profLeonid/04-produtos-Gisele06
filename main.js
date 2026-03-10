@@ -1,36 +1,46 @@
 "use strict"
 
-
-
 function adicionarProduto(){
-    
-    const produto= document.getElementById('produto')
-    const lista = document.getElementById('lista')
 
-    const spanProduto = document.createElement('span') 
-    spanProduto.textContent = produto.value
-    span.className = "px-8 py-2"
+const produto = document.getElementById('produto').value
+const codigo = document.getElementById('codigo').value
+const quantidade = document.getElementById('quantidade').value
 
-    const codigo = document.getElementById('codigo')
+const lista = document.getElementById('lista')
 
-    const spanCodigo = document.createElement('span')
-    spanCodigo.textContent = codigo.value
-    span.className = "px-8 py-2"
+const linha = document.createElement('tr')
 
-    const quantidade = document.getElementById('codigo')
+const colunaProduto = document.createElement('td')
+const colunaCodigo = document.createElement('td')
+const colunaQuantidade = document.createElement('td')
 
-    const spanQuantidade = document.createElement('span')
-    spanQuantidade.textContent = quantidade.value
-    span.className = "px-8 py-2"
+colunaProduto.textContent = produto
+colunaCodigo.textContent = codigo
+colunaQuantidade.textContent = quantidade
 
-    lista.appendChild(spanProduto)
-    lista.appendChild(spanCodigo)
-    lista.appendChild(spanQuantidade)
+colunaProduto.className = "border px-4 py-2"
+colunaCodigo.className = "border px-4 py-2"
+colunaQuantidade.className = "border px-4 py-2"
+
+linha.appendChild(colunaProduto)
+linha.appendChild(colunaCodigo)
+linha.appendChild(colunaQuantidade)
+
+lista.appendChild(linha)
+limparCampos()
 
 }
 
-// function validarCampos(){
-//     if(produto.value == "" || codigo.value == ""|| quantidade.value == ""){
-//         console.log("arroz com batatinha")
-//     }
-// }
+function limparCampos(){
+    document.getElementById('lista').value = ''
+    document.getElementById('produto').value = ''
+    document.getElementById('quantidade').value = ''
+    document.getElementById('codigo').value = ''
+
+}
+
+
+
+
+
+
