@@ -1,5 +1,3 @@
-# Cadastro de Produtos
-
 # 🛒 Lista de Produtos
 
 Aplicação web simples para cadastro e exibição de produtos em uma tabela.
